@@ -10,6 +10,7 @@ function draw() {
     background("black");
 
     player1.display();
+    player1.gravity();
 
     player1.movement();
 }

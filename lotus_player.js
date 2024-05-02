@@ -11,6 +11,7 @@ class player extends dynamic_sprite {
     movement() {
         if(keyIsDown(87))  {
             this.y -= 5;
+            this.velocity.y = -10;
         }
 
         if(keyIsDown(65))  {
@@ -18,7 +19,7 @@ class player extends dynamic_sprite {
         }
 
         if(keyIsDown(83))  {
-            this.y += 5;
+           // this.y += 5;
         }
 
         if(keyIsDown(68))  {
