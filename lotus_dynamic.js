@@ -14,11 +14,10 @@ class dynamic_sprite extends base_sprite {
     }
 
     gravity() {
-        if(this.y+25 >= 400) {
+        if(this.touching_ground === true) {
             this.velocity.y = 0;
-            this.touching_ground = true;
+            //this.touching_ground = true;
         }else {
-            this.touching_ground = false;
             this.velocity.y += this.acceleration.y;
             this.y += this.velocity.y;
         }
