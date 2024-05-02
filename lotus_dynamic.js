@@ -7,6 +7,8 @@ class dynamic_sprite extends base_sprite {
         this.w = w;
         this.h = h;
 
+        this.touching_ground = false;
+
         this.velocity = {x: 0, y: 0};
         this.acceleration = {x: 0, y: 0.2};
     }
@@ -14,7 +16,9 @@ class dynamic_sprite extends base_sprite {
     gravity() {
         if(this.y+25 >= 400) {
             this.velocity.y = 0;
+            this.touching_ground = true;
         }else {
+            this.touching_ground = false;
             this.velocity.y += this.acceleration.y;
             this.y += this.velocity.y;
         }

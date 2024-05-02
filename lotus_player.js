@@ -9,9 +9,11 @@ class player extends dynamic_sprite {
     }
 
     movement() {
-        if(keyIsDown(87))  {
-            this.y -= 5;
-            this.velocity.y = -10;
+        if(keyIsDown(32))  {
+            if(this.touching_ground === true) {
+                this.y -= 5;
+                this.velocity.y = -8;
+            }
         }
 
         if(keyIsDown(65))  {
