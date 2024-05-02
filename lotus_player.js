@@ -1,4 +1,4 @@
-class player extends dynamic_sprite {
+class player_sprite extends dynamic_sprite {
     constructor(x,y,w,h) {
         super(x,y,w,h);
 
